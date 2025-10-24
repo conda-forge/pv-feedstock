@@ -12,14 +12,18 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1000
+  number: 1001
   skip: True  # [win]
+  run_exports:
+    - {{ pin_subpackage('pv',max_pin="x.x") }}
 
 requirements:
   build:
     - make
     - {{ compiler('c') }}
-
+    - {{ stdlib("c")  }}
+    - gettest
+    - awk
 test:
   commands:
     - pv --version
@@ -31,4 +35,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - shahin
+    - shahini
