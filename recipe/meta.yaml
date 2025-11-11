@@ -20,6 +20,7 @@ requirements:
     - make
     - {{ compiler('c') }}
     - gettest
+    - awk
 
 test:
   commands:
