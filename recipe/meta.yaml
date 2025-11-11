@@ -20,7 +20,7 @@ requirements:
     - make
     - {{ compiler('c') }}
     - gettest
-    - awk
+
 test:
   commands:
     - pv --version
@@ -32,4 +32,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - shahini
+    - shahin
