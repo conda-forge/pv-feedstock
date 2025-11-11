@@ -12,16 +12,13 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1001
+  number: 1000
   skip: True  # [win]
-  run_exports:
-    - {{ pin_subpackage('pv',max_pin="x.x") }}
 
 requirements:
   build:
     - make
     - {{ compiler('c') }}
-    - {{ stdlib("c")  }}
     - gettest
     - awk
 test:
