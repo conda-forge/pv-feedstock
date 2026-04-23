@@ -19,6 +19,8 @@ requirements:
   build:
     - make
     - {{ compiler('c') }}
+    - gettest
+    - awk
 
 test:
   commands:
